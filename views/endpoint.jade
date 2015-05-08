@@ -1,0 +1,38 @@
+
+
+if (info == undefined)
+    | An error occured please try and login again
+else
+    h3 System Info
+    table(class='min-table min-table-horizontal')
+        thead
+            tr
+                th System Name
+                th Endpoint Type
+        tbody
+            tr
+                td #{info.ContactInfo[0]._}
+                td #{info.ProductId[0]._}
+            tr
+                td(colspan=2)
+                    input#uri(type="text", placeholder="uri" size=40)
+                    button#callButton(class="btn btn-sm btn-default", type="button") place call
+                    br
+                    input#dtmf(type="text", placeholder="dtmf" size=40)
+                    button#dtmfButton(class="btn btn-sm btn-default", type="button") send dtmf
+                    #callMessage
+
+    br
+    #calldiv
+        h3 Call Info
+        #callinfo
+
+    br
+
+
+    script(type="text/javascript").
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'js/endpoint.js';
+        $("head").append(script);
+

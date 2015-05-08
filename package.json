@@ -1,0 +1,14 @@
+{
+  "name": "EndpointDialer",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "~4.10.4",
+    "body-parser": "~1.10.2",
+    "jade": "~1.8.1",
+    "request": "~2.51.0",
+    "stylus": "~0.49.3",
+    "nib": "~1.0.4",
+    "express-session": "~1.11.1"
+  }
+}

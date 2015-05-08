@@ -1,0 +1,25 @@
+
+if (callinfo == undefined)
+    | There are currently no active calls
+else
+    table(class='min-table min-table-horizontal')
+        thead
+            tr
+
+                th Remote Number
+                th Protocol
+                th Rx Rate
+                th Tx Rate
+                th Status
+                th
+
+        tbody
+            for call in callinfo
+                tr
+                    td #{call.RemoteNumber[0]._}
+                    td #{call.Protocol[0]._}
+                    td #{call.ReceiveCallRate[0]._}
+                    td #{call.TransmitCallRate[0]._}
+                    td #{call.Status[0]._}
+                    td
+                        button(class="btn btn-sm btn-default", type="button" onClick='disconnectCall(#{call.$.item})') disconnect
